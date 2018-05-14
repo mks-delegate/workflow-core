@@ -90,6 +90,7 @@ namespace WorkflowCore.Services.DefinitionStorage
                 targetStep.RetryInterval = nextStep.RetryInterval;
                 targetStep.Tag = $"{nextStep.Id}";
 
+                AttachStatics(nextStep, dataType, stepType, targetStep);
                 AttachInputs(nextStep, dataType, stepType, targetStep);
                 AttachOutputs(nextStep, dataType, stepType, targetStep);
 
@@ -164,6 +165,19 @@ namespace WorkflowCore.Services.DefinitionStorage
             }
 
             return result;
+        }
+        private void AttachStatics(StepSourceV1 source, Type dataType, Type stepType, WorkflowStep step)
+        {
+            foreach (var staticMap in source.Statics)
+            {
+                var targetExpr = Expression.Property(Expression.Parameter(stepType), staticMap.Key);
+
+                step.Statics.Add(new DataMappingStatics()
+                {
+                    Source = staticMap.Value,
+                    Target = Expression.Lambda(targetExpr)
+                });
+            }
         }
 
         private void AttachInputs(StepSourceV1 source, Type dataType, Type stepType, WorkflowStep step)

@@ -19,6 +19,8 @@ namespace WorkflowCore.Models
 
         public virtual List<StepOutcome> Outcomes { get; set; } = new List<StepOutcome>();
 
+        public virtual List<DataMappingStatics> Statics { get; set; } = new List<DataMappingStatics>();
+
         public virtual List<DataMapping> Inputs { get; set; } = new List<DataMapping>();
 
         public virtual List<DataMapping> Outputs { get; set; } = new List<DataMapping>();

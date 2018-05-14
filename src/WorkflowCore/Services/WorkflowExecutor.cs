@@ -153,6 +153,12 @@ namespace WorkflowCore.Services
 
         private void ProcessInputs(WorkflowInstance workflow, WorkflowStep step, IStepBody body, IStepExecutionContext context)
         {
+            foreach (var staticInput in step.Statics)
+            {
+                var member = (staticInput.Target.Body as MemberExpression);
+                step.BodyType.GetProperty(member.Member.Name).SetValue(body, staticInput.Source);
+            }
+
             //TODO: Move to own class
             foreach (var input in step.Inputs)
             {
