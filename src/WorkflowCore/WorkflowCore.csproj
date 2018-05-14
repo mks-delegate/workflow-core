@@ -2,24 +2,24 @@
 
   <PropertyGroup>
     <AssemblyTitle>Workflow Core</AssemblyTitle>
-    <Authors>Daniel Gerlag</Authors>
+    <Authors>Daniel Gerlag edited by (malthestougaard)</Authors>
     <TargetFramework>netstandard1.3</TargetFramework>
     <AssemblyName>WorkflowCore</AssemblyName>
-    <PackageId>WorkflowCore</PackageId>
+    <PackageId>Mks.WorkflowCore</PackageId>
     <PackageTags>workflow;.NET;Core;state machine</PackageTags>
-    <PackageProjectUrl>https://github.com/danielgerlag/workflow-core</PackageProjectUrl>
-    <PackageLicenseUrl>https://github.com/danielgerlag/workflow-core/blob/master/LICENSE.md</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/mks-delegate/workflow-core</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/mks-delegate/workflow-core/blob/master/LICENSE.md</PackageLicenseUrl>
     <RepositoryType>git</RepositoryType>
-    <RepositoryUrl>https://github.com/danielgerlag/workflow-core.git</RepositoryUrl>
+    <RepositoryUrl>https://github.com/mks-delegate/workflow-core.git</RepositoryUrl>
     <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
     <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
     <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
-    <Description>Workflow Core is a light weight workflow engine targeting .NET Standard.</Description>
+    <Description>This is a fork of workflow-core by Daniel Gerlag (danielgerlag)</Description>
     <Version>1.6.3</Version>
     <AssemblyVersion>1.6.3.0</AssemblyVersion>
     <FileVersion>1.6.3.0</FileVersion>
     <PackageReleaseNotes></PackageReleaseNotes>
-    <PackageIconUrl>https://github.com/danielgerlag/workflow-core/raw/master/src/logo.png</PackageIconUrl>
+    <PackageIconUrl>https://github.com/mks-delegate/workflow-core/raw/master/src/logo.png</PackageIconUrl>
   </PropertyGroup>
 
   <ItemGroup>
